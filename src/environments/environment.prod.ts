@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  operationUrl: "localhost:8085/operation"
+  operationUrl: "http://localhost:8085/operation",
+  allowedOperationsUrl: "http://localhost:8085/allowed"
 };

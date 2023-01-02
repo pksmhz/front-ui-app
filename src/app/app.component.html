@@ -4,6 +4,23 @@
 
 
   <br/>
-  <input class="form-control main-top-margin" type="text" placeholder="Podaj wartość numeryczną">
-  <button type="button" class="btn btn-primary btn-rounded main-top-margin">Wyślij!!</button>
+  <div class="form-group">
+    <label for="operationSelect">Podaj operację do wykonania:</label>
+    <ng-container *ngIf="availOperations | async as myVar">
+    <select class="form-select" id="operationSelect" [(ngModel)]="selectedOperation">
+      <option *ngFor="let op of myVar.allowedOperations" [value]="op">
+        {{ op }}
+    </option>
+    </select>
+    </ng-container>
+  </div>
+  <input class="form-control main-top-margin" type="text" placeholder="Podaj wartość numeryczną" [(ngModel)]="numericValue">
+  <button (click)="onButtonPress()" [disabled]="isButtonEnabled()" class="btn btn-primary btn-rounded main-top-margin">Wyślij!!</button>
+  <ul>
+    <li>First line</li>
+    <li>First line</li>
+    <li>First line</li>
+    <li>First line</li>
+  </ul>
+
 </div>
