@@ -16,7 +16,6 @@ export class RestOperationService {
    private allowedOperations: Observable<AllowedOperationsResponse>;
 
    public getAllowedOperations(): Observable<AllowedOperationsResponse> {
-    debugger;
     return this.allowedOperations;
    }
    
