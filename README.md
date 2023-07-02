@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 docker scan app/front:latest
 
 docker build -t app/front .
-docker run -p 8085:8085 --name front_app app/front
+docker run -p 8080:8080 --name front_app app/front
 
 
  choco upgrade nodejs.install --version 18.12.1 --allow-downgrade

@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:lts-alpine as node
+FROM node:lts-alpine AS node
 WORKDIR /app
 COPY . .
 RUN npm install
